@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Crowdfunding product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  button:hover{background-color:yellow;}
+  body{ font-family:Commissioner; font-size:17px;}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div>
+    
+     <div class="w3-bar-block w3-sidebar w3-animate-left w3-grey w3-round-large w3-card" style="width:300px; height:200px; margin: 30px 10px 30px 70px; display:none" id="demo">
+   <button class="w3-right w3-button w3-bar-item w3-xxlarge" onclick="myfu()" href="#">&times</button>
+   <a class="w3-button w3-hide-large w3-border-grey w3-hide-medium w3-text-black w3-bar-item">About</a>
+    <a class="w3-button w3-hide-large w3-hide-medium  w3-text-black w3-bar-item">Discover</a>
+    <a class="w3-button w3-hide-medium w3-hide-large  w3-text-black w3-bar-item">Get Started</a>
+    </div>
+   <div id="id01" class="w3-modal w3-border w3-round-large w3-padding-large w3-animate-opacity">
+    <div class="w3-modal-content w3-border w3-round-xlarge w3-card-4">
+      <header class="w3-container w3-white"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h4><strong>Back this project</strong></h4>
+        <p class="w3-opacity"><strong> Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</strong></p>
+      </header>
+      <div class="w3-container">
+        <div style="border:2px solid grey" class="w3-panel w3-round-large w3-hover-border-cyan">
+       <p> <strong><input class="w3-radio w3-cyan" type="radio" name="" value="" >
+  <label> <span class="w3-hover-text-cyan"> Pledge with no reward</span></label></strong></p>
+       <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
+  you will be signed up to receive product updates via email.</p>
+       </div>
+        <div style="border:2px solid grey" class="w3-panel w3-round-large w3-hover-border-cyan">
+          <div class="w3-row">
+            <div class="w3-half">
+              <p> <strong><input class="w3-radio" type="radio" name="" value="" >
+  <label class="w3-hover-text-cyan"><span class="w3-hover-text-cyan" > Bamboo Stand</span></label></strong></p>
+   <p style="color:hsl(176, 50%, 47%);">Pledge $25 or more</p>
+            </div>
+            <div class="w3-half">
+             
+              <h3 class="w3-right w3-hide-small"><strong>101 <span class="w3-opacity w3-small">left</span></strong></h3>
+            </div>
+          </div>
+       
+       <p class="w3-opacity"><strong>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+  you’ll be added to a special Backer member list.</strong></p>
+  <h3 class="w3-hide-large w3-hide-medium "><strong>101 <span class="w3-opacity w3-small">left</span></strong></h3>
+  <hr class="w3-black w3-opacity">
+  <div class="w3-row">
+    <div class="w3-half">
+      <p class="w3-opacity">
+      Enter Your Pledge</p>
+    </div>
+    <div class="w3-half">
+      <input class="w3-border-cyan w3-round-xlarge" type="reset" name="dollar" id="" value="$ 25" />
+      <button onclick="document.getElementById('id02').style.display='block'" class="w3-text-white w3-blue w3-hover-cyan w3-round-xlarge" type="submit">continue</button>
+    </div>
+  </div>
+       </div>
+          <div style="border:2px solid grey" class="w3-panel w3-round-large w3-hover-border-cyan">
+          <div class="w3-row">
+            <div class="w3-half">
+              <p> <strong><input class="w3-radio" type="radio" name="" value="" >
+  <label class="w3-hover-text-cyan"><span class="w3-hover-text-cyan" > Black Edition Stand</span></label></strong></p>
+   <p style="color:hsl(176, 50%, 47%);">Pledge $75 or more</p>
+            </div>
+            <div class="w3-half">
+             
+              <h3 class="w3-right w3-hide-small"><strong>64 <span class="w3-opacity w3-small">left</span></strong></h3>
+            </div>
+          </div>
+           <p class="w3-opacity"><strong>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+  member list. Shipping is included.</strong></p>
+  <h3 class="w3-hide-large w3-hide-medium "><strong>64 <span class="w3-opacity w3-small">left</span></strong></h3>
+  <hr class="w3-black w3-opacity">
+  <div class="w3-row">
+    <div class="w3-half">
+      <p class="w3-opacity">
+      Enter Your Pledge</p>
+    </div>
+    <div class="w3-half">
+      <input class="w3-border-cyan w3-round-xlarge" type="reset" name="dollar" id="" value="$ 75" />
+      <button onclick="document.getElementById('id02').style.display='block'" class="w3-text-white w3-blue w3-hover-cyan w3-round-xlarge" type="submit">continue</button>
+      <div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container w3-padding-32 w3-center">
+       <div>
+         <img src="icon-check.svg" alt="" />
+          <p><strong>Thanks for your support!</strong></p>
+  <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+  an email once our campaign is completed.
+  Got it!</p>
+       </div>
+     
+   <button onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-border w3-cyan w3-round-large">Get it</button>
+      </div>
+    </div>
+  </div>
+</div>
+         
+    </div>
+  </div>
+       </div>
+          <div style="border:2px solid grey" class="w3-panel w3-opacity w3-round-large w3-hover-border-cyan">
+          <div class="w3-row">
+            <div class="w3-half">
+              <p> <strong><input class="w3-radio" type="radio" name="" value="" >
+  <label class="w3-hover-text-cyan"><span class="w3-hover-text-cyan" > Mahogany Special Edition</span></label></strong></p>
+   <p style="color:hsl(176, 50%, 47%);">Pledge $200 or more</p>
+            </div>
+            <div class="w3-half">
+             
+              <h3 class="w3-right w3-hide-small"><strong>0 <span class="w3-opacity w3-small">left</span></strong></h3>
+            </div>
+          </div>
+          <p class="w3-opacity"><strong>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+  to our Backer member list. Shipping is included.</strong></p>
+  <h3 class="w3-hide-large w3-hide-medium "><strong>0 <span class="w3-opacity w3-small">left</span></strong></h3>
+  <hr class="w3-black w3-opacity">
+  <div class="w3-row">
+    <div class="w3-half">
+      <p class="w3-opacity">
+      Enter Your Pledge</p>
+    </div>
+    <div class="w3-half">
+      <input class="w3-border-cyan w3-round-xlarge" type="reset" name="dollar" id="" value="$ 200" />
+      <button onclick="document.getElementById('id02').style.display='block'" class="w3-text-black w3-grey w3-round-xlarge" type="submit">continue</button>
+    </div>
+  </div>
+       </div>
+        
+      </div>
+      <footer class="w3-container">
+        
+      </footer>
+    </div>
+  </div>
+  <div class="w3-bar" style="background-image:url('image-hero-desktop.jpg')" >
+    <img class="w3-bar-item" src="logo.svg" alt="" />
+    <a class="w3-button w3-hide-small w3-right w3-text-white w3-bar-item">About</a>
+    <a class="w3-button w3-hide-small w3-right w3-text-white w3-bar-item">Discover</a>
+    <a class="w3-button w3-hide-small w3-right w3-text-white w3-bar-item">Get Started</a>
+    <a onclick="myfun()" class="w3-right w3-margin w3-hide-large w3-hide-medium w3-text-white w3-large" href="#"><i class="fa fa-bars"></i></a>
+    <div class="w3-white w3-card w3-padding-32 w3-container w3-border w3-round-large" style="text-align:center; margin: 100px 40px 0 40px;">
+      <img class="w3-center" src="logo-mastercraft.svg" alt="" />
+      <h1 class="" style="font-weight:bold;">Mastercraft Bamboo Monitor Riser</h1>
+  <p class="w3-opacity">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+  <button class="w3-left w3-hover-cyan w3-padding w3-text-white w3-round-large w3-border" onclick="document.getElementById('id01').style.display='block'"  type="submit" style="background-color:hsl(176, 50%, 47%); margin: 5px 3px 5px 3px;"> Back this project</button>
+  <button class="w3-hide-small w3-border w3-round-large"><img src="icon-bookmark.svg" alt="" /><button class="w3-hide-small w3-border w3-round-large">Bookmark</button>
+  <img class="w3-hide-large w3-hide-medium" src="icon-bookmark.svg" alt="" />
+    </div>
+  </div>
+<div class="w3-white w3-card w3-padding-32 w3-container w3-border w3-round-large" style="text-align:center; margin: 100px 40px 0 40px;">
+  <div class="w3-row">
+  <div class="w3-third">
+    
+  
+  <h1 class=""><strong>$89,914</strong></h1>
+  <p class="w3-opacity">of $100,000 backed</p>
+ <p><hr style="width:0px;" class="w3-opacity w3-black"></p>
+ <div class="" style="margin:30px 30px 20px 70px;">
+   <hr style="width:100px" class="w3-opacity w3-hide-medium w3-hide-large w3-black">
+ </div>
+ </div>
+  <div class="w3-third ">
+  <h1 class=""><strong>5,007 </strong></h1>
+  <p class="">total backers</p>
+  <div class="" style="margin:30px 30px 20px 70px;">
+   <hr style="width:100px" class="w3-opacity w3-hide-large w3-hide-medium w3-black">
+ </div>
+ </div>
+  <div class="w3-third">
+  <h1 class=""><strong>56</strong></h1
+
+  <p class=" ">Days to go</p>
+</div>
+ 
+</div>
+<div class="w3-light-grey w3-round-large">
+  <div class="w3-round-large" style="height:15px;background-color:hsl(176, 50%, 47%); width:70%"></div>
+</div>
+</div>
+
+ <div class="w3-white w3-card w3-padding-32 w3-container w3-border w3-round-large" style="text-align:center; margin: 100px 40px 0 40px;">
+   <h1 class=""><strong>About this project</strong></h1>
+   <p class="w3-opacity"><strong>  The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+  to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+  your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+
+  Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+  to allow notepads, pens, and USB sticks to be stored under the stand.</strong></p>
+    <div class="w3-white w3-card-4 w3-padding-32 w3-container w3-border w3-round-large" style="text-align:left; margin: 100px 10px 0 10px;">
+      <div class="w3-row">
+        <div class="w3-half">
+            <h3 class=""><strong>Bamboo Stand</strong></h3>
+        </div>
+        <div class="w3-half">
+          <p class="w3-right" style="color:hsl(176, 50%, 47%)">Pledge $25 or more</p>
+        </div>
+      </div>
+    
+      
+      <p class="w3-opacity"><strong>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+  you’ll be added to a special Backer member list.</strong></p>
+  
+     <h3 class=""><strong>101 <span class="w3-opacity w3-small">left</span></strong></h3>
+      <button class="w3-left w3-hover-cyan w3-padding w3-text-white w3-round-xlarge w3-border" type="submit" style="background-color:hsl(176, 50%, 47%); margin: 5px 3px 5px 3px;" onclick="document.getElementById('id01').style.display='block'" > Select Reward</button>
+      </div>
+       <div class="w3-white w3-card-4 w3-padding-32 w3-container w3-border w3-round-large" style="text-align:left; margin: 100px 10px 0 10px;">
+      <div class="w3-row">
+        <div class="w3-half">
+           <h3 class=""><strong>Black Edition Stand</strong></h3>
+        </div>
+        <div class="w3-half">
+           <p class="w3-right" style="color:hsl(176, 50%, 47%)">Pledge $75 or more</p>
+        </div>
+      </div>
+     
+     
+      <p class="w3-opacity"><strong>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+  member list. Shipping is included.</strong></p>
+  
+     <h3 class=""><strong>64 <span class="w3-opacity w3-small">left</span></strong></h3>
+      <button class="w3-left w3-hover-cyan w3-padding w3-text-white w3-round-xlarge w3-border" type="submit" style="background-color:hsl(176, 50%, 47%); margin: 5px 3px 5px 3px;" onclick="document.getElementById('id01').style.display='block'" > Select Reward</button>
+      </div>
+       <div class="w3-white w3-card-4 w3-padding-32 w3-container w3-border w3-round-large" style="text-align:left; margin: 100px 10px 0 10px;">
+         <div class="w3-row">
+        <div class="w3-half">
+          <h3 class="w3-opacity"><strong>Mahogany Special Edition</strong></h3>
+        </div>
+        <div class="w3-half">
+          <p class="w3-right" style="color:hsl(176, 50%, 47%)">Pledge $200 or more</p>
+        </div>
+      </div>
+      
+      
+      <p class="w3-opacity"><strong>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+  to our Backer member list. Shipping is included.</strong></p>
+  
+     <h3 class=""><strong>0 <span class="w3-opacity w3-small">left</span></strong></h3>
+      <button class="w3-left w3-padding w3-text-white w3-round-xlarge w3-border" type="submit" style="background-color:
+      grey; margin: 5px 3px 5px 3px;"> Out of Stock</button>
+      </div>
+   </div>
+
+   
+ </div>
+  <!-- Selection modal end -->
+
+  <!-- Success modal start -->
+
+  
+
+  <!-- Success modal end -->
+  </div>
+  <script>
+    function myfun(){
+      document.getElementById('demo').style.display="block";
+      
+    }
+    function myfu(){
+      document.getElementById('demo').style.display="none";
+      
+    } 
+  </script>
+</body>
+</html>
